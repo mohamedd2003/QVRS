@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@700&display=swap');
+.amiri {
+  font-family: "Amiri", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+::selection {
+  color: white;
+background-color: green;
+}
+.noto{
+  font-family: "Noto Nastaliq Urdu", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-content {
+  display: inline-block;
+  
+}
+
+.marquee-content {
+  font-size: 60px;
+  padding-left: 100%;
+  display: inline-block;
+  line-height: 100px;
+  font-weight: 700;
+  padding-right: 8px;
+  font-family: "Prompt", Helvetica, Arial, sans-serif;
+  user-select: none;
+  color: transparent;
+  animation: marquee 200s linear infinite;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.71);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@font-face {
+  font-family: "surahName";
+  src: url('/assets/fonts/arbfonts_Qurraan_sora.otf');
+}
+
+.surahName {
+  font-family: "surahName";
+  
+}
+@font-face {
+  font-family: "ayah";
+  src: url('/assets/fonts/KFGQPC Uthmanic Script HAFS.otf');
+}
+
+.ayah {
+  font-family: "ayah";
+  
+}
+
+
+@keyframes paging {
+  to {
+    transform: rotateY( -180deg );
+  }
+}
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 font-medium text-white rounded-lg shadow-sm transition-colors duration-200 bg-primary-600 hover:bg-primary-700 hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 font-medium text-white rounded-lg shadow-sm transition-colors duration-200 bg-secondary-600 hover:bg-secondary-700 hover:shadow-md;
+  }
+  
+  .card {
+    @apply p-6 bg-white rounded-xl shadow-md transition-shadow duration-200 hover:shadow-lg;
+  }
+  
+  .input-field {
+    @apply px-4 py-2 w-full rounded-lg border border-gray-300 transition-all duration-200 focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .nav-link {
+    @apply relative font-medium text-gray-700 transition-colors duration-200 hover:text-primary-600;
+  }
+  
+  .nav-link.active {
+    @apply text-primary-600;
+  }
+  
+  .nav-link.active::after {
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-primary-600;
+    content: '';
+  }
+}
