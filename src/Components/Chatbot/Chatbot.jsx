@@ -9,7 +9,7 @@ import LoadingSpinner from '../Lazyloading/Loader';
 import TypingEffect from './TypingEffect';
 
 const Tafseer = () => {
-  const baseUrl="https://brings-ht-pace-properties.trycloudflare.com"
+  const baseUrl="https://nn-io-oops-bg.trycloudflare.com"
   const { t, isRTL } = useLanguage();
   const [activeBot, setActiveBot] = useState('muyasser');
   const [conversations, setConversations] = useState({
